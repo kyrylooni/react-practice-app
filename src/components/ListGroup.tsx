@@ -1,5 +1,10 @@
+import { MouseEvent } from "react";
+
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  // type annotation
+
+  const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     // <> indicate a fragment
@@ -9,7 +14,9 @@ function ListGroup() {
       {items.length === 0 && <p>No item found </p>}
       <ul className="list-group">
         {items.map((item) => (
-          <li key={item}>{item}</li>
+          <li className="list-group-item" key={item} onClick={handleClick}>
+            {item}
+          </li>
         ))}
       </ul>
     </>
