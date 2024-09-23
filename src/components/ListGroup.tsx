@@ -1,5 +1,5 @@
 function ListGroup() {
-  const items = [];
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
   return (
     // <> indicate a fragment
